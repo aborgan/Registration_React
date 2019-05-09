@@ -1,0 +1,21 @@
+.landing-container {
+    position:relative;
+    width:60%;
+    margin: 0 auto;
+    margin-top:16em;
+    background-color:white;
+    border-radius:10px;
+    padding-top:1%;
+    padding-bottom:1em;
+    word-wrap: break-word;
+}
+
+@media only screen and (min-width: 700px) {
+    .landing-container {
+        width:420px;
+    }
+}
+
+.center {
+    text-align: center;
+}
