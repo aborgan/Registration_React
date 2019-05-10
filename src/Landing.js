@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {StateContext} from './App.js';
 import '../css/landing.css'
 
 const landing = props => {
-    const state = props.state
+    const state = useContext(StateContext);
     return (
     <div className="landing-container">
         <h1 className="center">Welcome</h1>

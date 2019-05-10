@@ -1,9 +1,10 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useContext} from 'react';
 import '../css/registration.css';
+import {StateContext} from './App.js';
 import FormTextField from './FormTextField';
 
 const Container = props => {
-    const state = props.state;
+    const state = useContext(StateContext);
     const handleUpdate = props.handleUpdate;
     const [isMale, updateIsMale] = useState(false);
     const changeMale = _ => updateIsMale(!isMale);
@@ -14,7 +15,7 @@ const Container = props => {
             return;
         }
         props.register();
-    });
+    }, []);
 
     return (
     <div className="container">
